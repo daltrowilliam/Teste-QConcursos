@@ -4,11 +4,90 @@
     box-sizing: border-box;
 }
 
+body {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#homeContainer {
+    display: grid;
+    grid-template-rows: 10vh 90vh;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-image: url("/Assets/successfu2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 header {
-    height: 10vh;
+    display: grid;
+    grid-template-columns: 30vw 65vw;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 50px;
+    padding: 20px;
+}
+
+#nomeContainer {
+    grid-column-start: 1;
+    grid-column-end: 2;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+#menuContainer {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+}
+
+.menuitem {
+    margin-left: 60px;
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color:white; 
+}
+
+#nomeitem {
+    margin-left: 30px;
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color:white; 
+}
+
+#vaga {
+    font-size: 3vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color:white;
+    margin-bottom: 5px;
+}
+
+#objetivo {
+    font-size: 2vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color:white;
+}
+
+#mainpage {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color:white;
+    padding-bottom: 170px;
 }
 
 section {
