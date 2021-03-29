@@ -2,6 +2,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color:rgb(255, 255, 255); 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    margin-left: 60px;
+    font-size: small;
+    font-weight: bold;
+}
+
+a:hover {
+    color:#1f5f7b;
+    text-decoration: none;
+}
+
+a:active {
+    color:#286d68;
+    text-decoration: none;
 }
 
 body {
@@ -9,86 +28,239 @@ body {
     grid-template-rows: 1fr 1fr 1fr;
 }
 
-#homeContainer {
-    display: grid;
-    grid-template-rows: 10vh 90vh;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    background-image: url("/Assets/successfu2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+    #homeContainer {
+        display: grid;
+        grid-template-rows: 10vh 75vh 15vh;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background-image: url("/Assets/imagem1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
-header {
-    display: grid;
-    grid-template-columns: 30vw 65vw;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    height: 50px;
-    padding: 20px;
-}
+        header {
+            display: grid;
+            grid-template-columns: 30vw 65vw;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            height: 50px;
+            padding: 20px;
+        }
 
-#nomeContainer {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20px;
-}
+            #nomeContainer {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding-bottom: 15px;
+            }
 
-#menuContainer {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 20px;
-}
+                #nomeitem {
+                    margin-left: 30px;
+                    font-size: small;
+                    font-weight: bold;
+                }
 
-.menuitem {
-    margin-left: 60px;
-    font-size: small;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    color:white; 
-}
+            #menuContainer {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding-bottom: 15px;
+            }
 
-#nomeitem {
-    margin-left: 30px;
-    font-size: small;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    color:white; 
-}
+                .menuitem {
+                    margin-left: 60px;
+                    font-size: small;
+                    font-weight: bold;
+                }
 
-#vaga {
-    font-size: 3vw;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    color:white;
-    margin-bottom: 5px;
-}
+        #centralContainer {
+            grid-row-start: 2;
+            grid-row-end: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
 
-#objetivo {
-    font-size: 2vw;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    color:white;
-}
+            #vaga {
+                font-size: 3vw;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
 
-#mainpage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    color:white;
-    padding-bottom: 170px;
-}
+            #objetivo {
+                font-size: 2vw;
+                font-weight: bold;
+            }
+
+        #socialContainer{
+            grid-row-start: 3;
+            grid-row-end: 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .sociaisIcones {
+                width: 40px;
+                height: 37px;
+                margin-left: 30px;
+                object-fit: contain;
+                padding-bottom: 5px;
+            }
+
+    #sobre {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40vw;
+        margin: 0 auto;
+    }
+
+        .titulo {
+            color: black;
+            padding-bottom: 40px;
+            font-size: 2vw;
+            font-weight: bold;
+        }
+
+
+        .texto {
+            color: black;
+            text-align: justify;
+            margin-bottom: 25px;
+        }
+  
+        .icones {
+            width: 40px;
+            height: 37px;
+            object-fit: contain;
+        }
+
+    #desafio {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-template-rows: 4fr 1fr;
+    }
+
+        #cardContainer {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            background-color:#d7e4ee;
+            display: flex;
+            flex-direction: column;
+            height: 85vh;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        
+            .subtitulo {
+                color: black;
+                font-size: 1vw;
+                font-weight: bold;
+            }
+
+            #card {
+                display: grid;
+                background-color:white;
+                width: 45vw;
+                height: 30vh;
+                border-radius: 2%;
+                grid-template-columns: 2fr 3fr;
+            }
+
+                #fotoUser {
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #fotoPerfil {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    margin-bottom: 20px;
+                }
+
+                #linkPerfil {
+                    margin: 0;
+                    color:#011627;
+                }
+
+                #infoContainer {
+                    grid-column-start: 2;
+                    grid-column-end: 3;
+                    display: grid;
+                    grid-template-rows: 3fr 1fr;
+                }
+                    #resumo {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        grid-row-start: 1;
+                        grid-row-end: 2;
+                        padding-left: 40px;
+                    }
+
+                    .textoResumo {
+                        color:#011627 ;
+                    }
+
+                    #botoes {
+                        grid-row-start: 2;
+                        grid-row-end: 3;
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        padding: 0px;
+                    }
+
+                        .BotaoCard {
+                            border-style: solid;
+                            border-color: #9ebfda;
+                            color:#9ebfda;
+                            padding: 8px;
+                            font-size: small;
+                            margin: auto;
+                        }
+
+        #rodape{
+            grid-row-start: 2;
+            grid-row-end: 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #011627;
+            height: 15vh;
+            font-size: small;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 section {
     display: flex;

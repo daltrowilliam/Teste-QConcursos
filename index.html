@@ -15,9 +15,9 @@
                 <p id="nomeitem">Daltro Machado</p>
             </div>
             <div id="menuContainer">
-                <p class="menuitem">Home</p>
-                <p class="menuitem">Sobre</p>
-                <p class="menuitem">Desafio</p>
+                <a href="#homeContainer">Home</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#desafio">Desafio</a>
             </div>
 
 <!--             <form action="">
@@ -37,76 +37,51 @@
             <button onclick="adicionarTarefa()">Criar tarefa</button>
             <button onclick="limparTarefas()">Limpar tarefas</button> -->
         </header>
-        <div id="mainpage">
+        <div id="centralContainer">
             <p id="vaga">Desenvolvedor Frontend</p>
             <p id="objetivo">Desafio Qconcursos.com</p>
         </div>
+        <div id="socialContainer">
+            <a href="https://www.linkedin.com/in/daltromachado/" target="_blank"><img src="/Assets/Redes Sociais/linkedin.svg" class="sociaisIcones"></a>
+            <a href="https://github.com/daltrowilliam" target="_blank"><img src="/Assets/Redes Sociais/github.svg" class="sociaisIcones"></a>
+            <a href="https://www.facebook.com/daltrowilliam.machado/" target="_blank"><img src="/Assets/Redes Sociais/facebook.svg" class="sociaisIcones"></a>
+        </div>
     </div>
-    
-    <div>
-        <div class="semana">
-            <h3>Domingo</h3>
-            <div class="ulTarefas" id="domingo">
-                <ul id="domingoUl">
+    <div id="sobre">
+        <p class="titulo">Sobre</p>
+        <p class="texto">Profissional com mais de 10 anos de experiência em tecnologia atuando em diferentes áreas de TI como infraestrutura, serviços, governança, processos e consultoria. Em 2020 busquei uma especialização em desenvolvimento full stack, podendo atuar tanto como desenvolvedor Front End como Back End.</p>
+        <p class="texto">Considero minhas principais competências o bom relacionamento e comunicação com a equipe, além da dedicação e comprometimento com a empresa e projeto. Sou detalhista, proativo e estou habilitado a assumir responsabilidades de Gestão de Equipes de TI.</p>
+        <p class="texto">Meu objetivo é trabalhar em empresas inovadoras que prezam e zelam pela gestão do capital intelectual. Meu foco é desenvolver minhas habilidades, contribuir para um ambiente saudável e respeitoso e construir histórias de sucesso em ambientes que proporcionem novos desafios e que gerem conhecimento contínuo.</p>
+        <a href="#homeContainer"><img src="/Assets/Botões/up.svg" class="icones"></a>
+    </div>
+    <div id="desafio">
+        <div id="cardContainer">
+            <p class="subtitulo">Desafio</p>
+            <div id="card">
+                <div id="fotoUser">
+                    <img id="fotoPerfil" src="/Assets/fotodaltro.png">
+                    <a id="linkPerfil" href="#homeContainer">Visitar Perfil</a>
+                </div>
+                <div id="infoContainer">
+                    <div id="resumo">
+                        <p class="textoResumo">Repositórios: 15</p>
+                        <p class="textoResumo">Seguidores: 75</p>
+                        <p class="textoResumo">Seguindo: 115</p>
+                    </div>
                     
-                </ul>
-            </div>
-        </div>
+                    <div id="botoes">
+                        <a class="BotaoCard" href="#homeContainer">VER REPOSITÓRIOS</a>
+                        <a class="BotaoCard"href="#homeContainer">VER FAVORITOS</a>
+                    </div>
+                </div>
 
-        <div class="semana">
-            <h3>Segunda-feira</h3>
-            <div class="ulTarefas" id="segunda">
-                <ul id="segundaUl">
-                
-                </ul>
             </div>
+            <a href="#homeContainer"><img src="/Assets/Botões/up.svg" class="icones"></a>
         </div>
-
-        <div class="semana">
-            <h3>Terça-feira</h3>
-            <div class="ulTarefas" id="terca">
-                <ul id="tercaUl">
-                
-                </ul>
-            </div>
-        </div>
-    
-        <div class="semana">
-            <h3>Quarta-feira</h3>
-            <div class="ulTarefas" id="quarta">
-                <ul id="quartaUl">
-                
-                </ul>
-            </div>
-        </div>
-    
-        <div class="semana">
-            <h3>Quinta-feira</h3>
-            <div class="ulTarefas" id="quinta">
-                <ul id="quintaUl">
-                
-                </ul>
-            </div>
-        </div>
-
-        <div class="semana">                    
-            <h3>Sexta-feira</h3>               
-            <div class="ulTarefas" id="sexta">
-                <ul id="sextaUl">
-                
-                </ul>
-            </div>
-        </div>
-
-        <div class="semana">
-            <h3>Sábado</h3>
-            <div class="ulTarefas" id="sabado">
-                <ul id="sabadoUl">
-                
-                </ul>
-            </div>
+        <div id="rodape">
+            <p>Desafio Desenvolvedor Front Qconcursos.com</p>
         </div>
     </div>
-    
+        
 </bodyclass=>
 </html>
