@@ -1,76 +1,77 @@
 
-function limparTarefas() {
-    const limparClasse = document.getElementsByClassName("ulTarefas")
-    for (let i = 0; i < limparClasse.length; i++){
-        limparClasse[i].innerHTML = " "
-    } 
+const seguidores = document.getElementById("seguidores")
+const seguindo = document.getElementById("seguindo")
+const fotoPerfil = document.getElementById("fotoPerfil")
+const repositorios = document.getElementById("repositorios")
+
+
+fetch('https://api.github.com/users/daltrowilliam')
+  .then(response => response.json())
+  .then(data => fotoPerfil.src = data.avatar_url);
+
+fetch('https://api.github.com/users/daltrowilliam/repos')
+  .then(response => response.json())
+  .then(data => repositorios.innerHTML = "Repositórios: " + data.length);
+
+fetch('https://api.github.com/users/daltrowilliam/followers')
+  .then(response => response.json())
+  .then(data => seguidores.innerHTML = "Seguidores: " + data.length);
+
+fetch('https://api.github.com/users/daltrowilliam/following')
+  .then(response => response.json())
+  .then(data => seguindo.innerHTML = "Seguindo: " + data.length);
+
+
+
+
+
+/* 
+requestRepositorios.open('get', 'https://api.github.com/users/daltrowilliam/repos');
+requestRepositorios.send()
+
+
+requestRepositorios.onreadystatechange = function() {
     
-        
-    }
-
-let contador = 1
-function adicionarTarefa() {
-    const tarefa = document.getElementById("tarefa")
-    const diasSemana = document.getElementById("dias-semana")
-
-    if (tarefa.value !== "") {
-        switch (diasSemana.value) {
-            case "domingo":
-                const domingoUl = document.getElementById("domingo")
-                domingoUl.innerHTML += `<li class="tarefas" id="domingo${contador}" onclick="document.getElementById('domingo${contador}').style.textDecoration = 'line-through'">${tarefa.value}</li>`
-                tarefa.value = ""
-                contador += 1
-                break;
-            
-            case "segunda":
-                const segundaUl = document.getElementById("segunda")
-                segundaUl.innerHTML += `<li class="tarefas" id="segunda${contador}" onclick="document.getElementById('segunda${contador}').style.textDecoration = 'line-through'">${tarefa.value}</li>`
-                tarefa.value = ""
-                contador += 1
-                break;
-
-            case "terca":
-                const tercaUl = document.getElementById("terca")
-                tercaUl.innerHTML += `<li class="tarefas" id="terca${contador}" onclick="document.getElementById('terca${contador}').style.textDecoration = 'line-through'">${tarefa.value}</li>`
-                tarefa.value = ""
-                contador += 1
-                break;
+    if(requestRepositorios.readyState === 4) {
     
-            case "quarta":
-                const quartaUl = document.getElementById("quarta")
-                quartaUl.innerHTML += `<li class="tarefas" id="quarta${contador}" onclick="document.getElementById('quarta${contador}').style.textDecoration = 'line-through'">${tarefa.value}</li>`
-                tarefa.value = ""
-                contador += 1
-                break;
-
-            case "quinta":
-                const quintaUl = document.getElementById("quinta")
-                quintaUl.innerHTML += `<li class="tarefas" id="quinta${contador}" onclick="document.getElementById('quinta${contador}').style.textDecoration = 'line-through'">${tarefa.value}</li>`
-                tarefa.value = ""
-                contador += 1
-                break;
-    
-            case "sexta":
-                const sextaUl = document.getElementById("sexta")
-                sextaUl.innerHTML += `<li class="tarefas" id="sexta${contador}" onclick="document.getElementById('sexta${contador}').style.textDecoration = 'line-through'">${tarefa.value}</li>`
-                tarefa.value = ""
-                contador += 1
-                break;
-    
-            case "sabado":
-                const sabadoUl = document.getElementById("sabado")
-                sabadoUl.innerHTML += `<li class="tarefas" id="sabado${contador}" onclick="document.getElementById('sabado${contador}').style.textDecoration = 'line-through'">${tarefa.value}</li>`
-                tarefa.value = ""
-                contador += 1
-                break;
-
-            default:
-                break;
-        } 
+      if(requestRepositorios.status === 200) {
+        const json = request.response;
+        const resposta = JSON.parse(json);
+        repositorios.innerHTML = "Repositórios:" + resposta.length
+      } else {
+        repositorios.innerHTML = "Repositório Offline"
+      }
     } else {
-        alert("Você precisa digitar uma tarefa!")
+        repositorios.innerHTML = "Repositório Offline"
     }
-
 }
+
+const btn = document.getElementById('request');
+var bio = document.getElementById('bio');
+ 
+var request = new XMLHttpRequest();
+ 
+request.onreadystatechange = function() {
+  if(request.readyState === 4) {
+    bio.style.border = '1px solid #e8e8e8';
+    if(request.status === 200) { 
+      bio.innerHTML = request.responseText;
+    } else {
+      bio.innerHTML = 'An error occurred during your request: ' +  request.status + ' ' + request.statusText;
+    } 
+  }
+}
+ 
+request.open('Get', 'Bio.txt');
+ 
+btn.addEventListener('click', function() {
+  this.style.display = 'none';
+  request.send();
+}); */
+
+
+
+
+
 
 

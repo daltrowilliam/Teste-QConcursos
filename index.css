@@ -216,7 +216,8 @@ body {
                     }
 
                     .textoResumo {
-                        color:#011627 ;
+                        color:#011627;
+                        margin-bottom: 4px;
                     }
 
                     #botoes {
